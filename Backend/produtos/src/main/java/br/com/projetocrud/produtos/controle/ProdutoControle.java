@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
 import br.com.projetocrud.produtos.modelo.ProdutoModelo;
 import br.com.projetocrud.produtos.modelo.RespostaModelo;
 import br.com.projetocrud.servico.ProdutoServico;
