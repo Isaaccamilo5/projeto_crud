@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import Formulario from './Formulario';
@@ -17,10 +17,8 @@ const[produtos, setProdutos] =useState([])
 
   return (
     <div>
-      <p>{JSON.stringify(produtos)}</p>
      <Formulario botao={btnCadastrar}/>
-     
-     <Tabela/>
+     <Tabela vetor={produtos}/>     
     </div>
   );
 }
