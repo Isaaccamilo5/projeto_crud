@@ -20,6 +20,7 @@ const[produtos, setProdutos] =useState([])
      <Formulario botao={btnCadastrar}/>
      <Tabela vetor={produtos}/>     
     </div>
+
   );
 }
 

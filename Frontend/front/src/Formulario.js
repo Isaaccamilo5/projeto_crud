@@ -3,7 +3,7 @@ function Formulario({botao}){
         
             <form>
             
-                <h1>Formulário</h1>
+            <h2>Sistema Gestor de Produtos</h2>
                 <input className="form-control" type='text' placeholder='Nome' />
                 <input className="form-control" type='text' placeholder='Marca'/>
                 {
