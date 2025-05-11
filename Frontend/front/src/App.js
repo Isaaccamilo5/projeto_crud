@@ -18,7 +18,7 @@ const[produtos, setProdutos] =useState([])
   return (
     <div>
      <Formulario botao={btnCadastrar}/>
-     <Tabela vetor={produtos}/>     
+     <Tabela vetor={produtos}/>  
     </div>
 
   );
