@@ -31,6 +31,9 @@ build/
 
 ### VS Code ###
 .vscode/
-{
-    "java.compile.nullAnalysis.mode": "automatic"
-}
+
+
+
+application.properties
+src/main/resources/application.properties
+
