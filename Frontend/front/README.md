@@ -1,70 +1,108 @@
-# Getting Started with Create React App
+# Projeto CRUD de Produtos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é um projeto de CRUD (Create, Read, Update, Delete) simples para gerenciamento de produtos. Sinta-se à vontade para usar, modificar e distribuir este código livremente, de acordo com os termos da licença MIT (veja abaixo).
 
-## Available Scripts
+## Visão Geral
 
-In the project directory, you can run:
+O projeto consiste em um backend em Java com Spring Boot e um frontend em React, permitindo a criação, leitura, atualização e exclusão de produtos.
 
-### `npm start`
+### Funcionalidades
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+*   **Criação de Produtos:** Adicione novos produtos ao sistema com nome, descrição e preço.
+*   **Listagem de Produtos:** Visualize todos os produtos cadastrados em uma tabela.
+*   **Edição de Produtos:** Modifique os detalhes de um produto existente.
+*   **Exclusão de Produtos:** Remova produtos do sistema.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tecnologias Utilizadas
 
-### `npm test`
+*   **Backend:**
+    *   Java
+    *   Spring Boot
+    *   Maven
+*   **Frontend:**
+    *   React
+    *   JavaScript
+    *   Vite
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Como Executar o Projeto
 
-### `npm run build`
+### Pré-requisitos
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+*   Java Development Kit (JDK) 17 ou superior
+*   Maven
+*   Node.js e npm (ou yarn)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Backend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1.  Navegue até o diretório `backend/crud_produtos`:
 
-### `npm run eject`
+    ```bash
+    cd backend/crud_produtos
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2.  Execute o aplicativo Spring Boot:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```bash
+    ./mvnw spring-boot:run
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    Ou, se preferir, construa o projeto e execute o arquivo JAR:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    ```bash
+    ./mvnw clean install
+    java -jar target/<nome_do_arquivo_jar>.jar
+    ```
 
-## Learn More
+    O backend estará disponível em `http://localhost:8080`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Frontend
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1.  Navegue até o diretório `frontend/front`:
 
-### Code Splitting
+    ```bash
+    cd frontend/front
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2.  Instale as dependências:
 
-### Analyzing the Bundle Size
+    ```bash
+    npm install
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    Ou, se usar yarn:
 
-### Making a Progressive Web App
+    ```bash
+    yarn install
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3.  Execute o aplicativo React:
 
-### Advanced Configuration
+    ```bash
+    npm run dev
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+    Ou, se usar yarn:
 
-### Deployment
+    ```bash
+    yarn dev
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+    O frontend estará disponível em `http://localhost:5173`.
 
-### `npm run build` fails to minify
+## Configuração
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Backend
+
+O arquivo de configuração do backend é `backend/crud_produtos/src/main/resources/application.properties`. Você pode configurar a porta do servidor, as configurações do banco de dados e outras propriedades do Spring Boot neste arquivo.
+
+### Frontend
+
+O frontend se conecta ao backend na porta 8080 por padrão. Se você precisar alterar a URL do backend, modifique o arquivo `frontend/front/src/Formulario.jsx` e `frontend/front/src/Tabela.jsx`.
+
+## Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests para melhorar o projeto.
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
