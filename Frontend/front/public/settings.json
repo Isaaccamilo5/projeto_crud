@@ -1,11 +1,3 @@
 {
-    "cSpell.words": [
-        "Alterar",
-        "Botao",
-        "Cadastrar",
-        "Cancelar",
-        "Formulario",
-        "Marca",
-        "Tabela"
-    ]
+    "java.compile.nullAnalysis.mode": "automatic"
 }
