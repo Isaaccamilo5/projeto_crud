@@ -1,40 +1,24 @@
-function Formulario({ botao, eventoTeclado, cadastrar, obj }) {
+function Formulario({ botao, eventoTeclado, cadastrar, obj, cancelar, remover, alterar }) {
   return (
     <form>
       <h2>Sistema Gestor de Produtos</h2>
-      <input
-        className="form-control mb-2"
-        type="text"
-        placeholder="Nome"
-        name="nome"
-        value={obj.nome}
-        onChange={eventoTeclado}
-      />
-      <input
-        className="form-control mb-2"
-        type="text"
-        placeholder="Marca"
-        name="marca"
-        value={obj.marca}
-        onChange={eventoTeclado}
-      />
+      <input type='text' value={obj.nome} placeholder='Nome' onChange={eventoTeclado} name="nome" className='form-control' />
+      <input type='text' value={obj.marca} placeholder='Marca' onChange={eventoTeclado} name="marca" className='form-control' />
       {
-        botao ?
-          <input
-            className="btn btn-success"
-            type="button"
-            value="Cadastrar"
-            onClick={cadastrar}
-          />
+        botao
+          ?
+          <div className="form-buttons">
+            <input type='button' value='Cadastrar' onClick={cadastrar} className='btn btn-success' />
+          </div>
           :
-          <div>
-            <input className="btn btn-warning" type="button" value="Cancelar" />
-            <input className="btn btn-primary" type="button" value="Alterar" />
-            <input className="btn btn-danger" type="button" value="Remover" />
+          <div className="form-buttons">
+            <input type='button' onClick={alterar} value='Alterar' className='btn btn-warning' />
+            <input type='button' onClick={remover} value='Remover' className='btn btn-danger' />
+            <input type='button' onClick={cancelar} value='Cancelar' className='btn btn-secondary' />
           </div>
       }
     </form>
-  );
+  )
 }
 
 export default Formulario;
