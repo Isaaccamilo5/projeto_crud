@@ -5,14 +5,17 @@ import Tabela from './Tabela';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
-
 function App() {
 
   //Objeto produto
   const produto = {
     codigo: null,
     nome: '',
-    marca: ''
+    marca: '',
+    descricao: '',
+    preco: '',
+    qtdEstoque: '',
+    urlImagem: ''
   }
 
   //UseState
@@ -57,6 +60,10 @@ function App() {
 
   //Alterar produto
   const alterar = () => {
+    if (objProduto.urlImagem.length > 255) {
+      alert("A URL da imagem é muito longa! Máximo de 255 caracteres.");
+      return;
+    }
     fetch('http://localhost:8080/alterar', {
       method: 'put',
       body: JSON.stringify(objProduto),
@@ -71,7 +78,7 @@ function App() {
           alert(retorno_convertido.mensagem);
         } else {
           alert('Produto alterado com sucesso!');
-          
+
           //Cópia do vetor de produtos
           let vetorTemp = [...produtos];
 
@@ -138,7 +145,7 @@ function App() {
 
   return (
     <div>
-      <Formulario botao={btnCadastrar} eventoTeclado={aoDigitar} cadastrar={cadastrar} obj={objProduto} cancelar={limparFormulario} remover={remover} alterar={alterar}/>
+      <Formulario botao={btnCadastrar} eventoTeclado={aoDigitar} cadastrar={cadastrar} obj={objProduto} cancelar={limparFormulario} remover={remover} alterar={alterar} />
       <Tabela vetor={produtos} selecionar={selecionarProduto} />
     </div>
   );
