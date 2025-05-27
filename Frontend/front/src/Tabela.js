@@ -9,7 +9,7 @@ function Tabela({ vetor, selecionar }) {
                     <th>Descrição</th>
                     <th>Preço</th>
                     <th>Quantidade em estoque</th>
-                    
+                    <th>Imagem</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,6 +23,9 @@ function Tabela({ vetor, selecionar }) {
                             <td> {obj.preco}</td>
                             <td> {obj.qtdEstoque}</td>
                             <td>
+                            <td>
+                                <img src={obj.urlImagem} alt={obj.nome} className="imagem-produto" />
+                            </td>
                               
                             </td>
                             <td>

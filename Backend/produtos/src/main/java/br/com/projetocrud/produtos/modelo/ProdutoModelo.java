@@ -22,4 +22,5 @@ public class ProdutoModelo{
   private String descricao;
   private double preco;
   private int qtdEstoque;
+  private String urlImagem;
 }
